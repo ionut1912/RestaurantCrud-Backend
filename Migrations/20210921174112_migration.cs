@@ -2,7 +2,7 @@
 
 namespace RestaurantApi.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,8 @@ namespace RestaurantApi.Migrations
                 {
                     FoodItemId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FoodItemName = table.Column<string>(type: "nvarchar(100)", nullable: true)
+                    FoodItemName = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    FoodItemPrice = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,7 +62,7 @@ namespace RestaurantApi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderMasterId = table.Column<long>(type: "bigint", nullable: false),
                     FoodItemId = table.Column<int>(type: "int", nullable: false),
-                    FoodItemPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    FoodItemPrice = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

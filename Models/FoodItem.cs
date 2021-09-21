@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 namespace RestaurantApi.Models
 {
     public class FoodItem
-    {   [Key]
+    {
+        [Key]
         public int FoodItemId { get; set; }
-        [Column(TypeName ="nvarchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string FoodItemName { get; set; }
-        public decimal Price;
+
+
+        public int FoodItemPrice { get; set; }
     }
+
 }

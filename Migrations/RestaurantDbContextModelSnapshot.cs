@@ -43,6 +43,9 @@ namespace RestaurantApi.Migrations
                     b.Property<string>("FoodItemName")
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int>("FoodItemPrice")
+                        .HasColumnType("int");
+
                     b.HasKey("FoodItemId");
 
                     b.ToTable("FoodItems");
@@ -58,8 +61,8 @@ namespace RestaurantApi.Migrations
                     b.Property<int>("FoodItemId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("FoodItemPrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("FoodItemPrice")
+                        .HasColumnType("int");
 
                     b.Property<long>("OrderMasterId")
                         .HasColumnType("bigint");
