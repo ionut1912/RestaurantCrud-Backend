@@ -64,9 +64,6 @@ namespace RestaurantApi.Controllers
             return NoContent();
         }
 
-        // POST: api/DCandidate
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         public async Task<ActionResult<FoodItem>> PostFoodItem(FoodItem foodItem)
         {
