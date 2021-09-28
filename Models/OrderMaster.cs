@@ -19,5 +19,7 @@ namespace RestaurantApi.Models
         public string PMethod { get; set; }
         public decimal GTotal;
         public List<OrderDetail> OrderDetails { get; set; }
+        [NotMapped]
+        public string DeletedOrderItemIds { get; set; }
     }
 }

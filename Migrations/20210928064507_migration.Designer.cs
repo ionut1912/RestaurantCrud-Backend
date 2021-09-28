@@ -9,7 +9,7 @@ using RestaurantApi.Models;
 namespace RestaurantApi.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    [Migration("20210921174112_migration")]
+    [Migration("20210928064507_migration")]
     partial class migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
